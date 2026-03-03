@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog_app',
     'books',
+    'tovars',
 ]
 
 MIDDLEWARE = [

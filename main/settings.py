@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'blog_app',
     'books',
     'tovars',
+    'orders',
 ]
 
 MIDDLEWARE = [

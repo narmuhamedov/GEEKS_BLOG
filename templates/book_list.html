@@ -1,3 +1,10 @@
+<form action="/search/" method="GET">
+    <input type="text" type="search" name="s" placeholder="Поиск...">
+    <button type="submit">Найти</button>
+</form>
+
+
+
 {% for i in book_key %}
 
 <p>{{ i.name_book }}</p>
@@ -6,3 +13,22 @@
 <a href="/books_list/{{ i.id }}/">Подробнее</a>
 
 {% endfor %}
+
+
+<div class="pagination">
+        <span class="step-links">
+            {% if book_key.has_previous %}
+                <a href="?page=1">&laquo; Первая</a>
+                <a href="?page={{ book_key.previous_page_number }}">Предыдущая</a>
+            {% endif %}
+
+            <span class="current">
+                Страница {{ book_key.number }} из {{ book_key.paginator.num_pages }}.
+            </span>
+
+            {% if book_key.has_next %}
+                <a href="?page={{ book_key.next_page_number }}">Следующая</a>
+                <a href="?page={{ book_key.paginator.num_pages }}">Последняя &raquo;</a>
+            {% endif %}
+        </span>
+    </div>

@@ -16,6 +16,9 @@ class Books(models.Model):
     
     url_audio_book = models.URLField(verbose_name='укажите ссылку на аудиокнигу')
 
+    #Логика для просмотров
+    views = models.PositiveIntegerField(default=0, null=True)
+
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

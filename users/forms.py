@@ -10,7 +10,6 @@ GENDER = (
 
 class CustomRegisterForm(UserCreationForm):
     email = forms.EmailField(required=True)
-    photo = forms.ImageField(required=True)
     phone_number = forms.CharField(max_length=15, initial='+996', required=True)
     gender = forms.ChoiceField(choices=GENDER, required=True)
     city = forms.CharField(max_length=100, required=True)
@@ -21,7 +20,6 @@ class CustomRegisterForm(UserCreationForm):
             "username",
             "password1",
             "password2",
-            "photo",
             "first_name",
             "last_name",
             "email",

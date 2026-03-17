@@ -10,8 +10,7 @@ class CustomUser(User):
     )
     city = models.CharField(max_length=100)
     gender = models.CharField(max_length=100, choices=GENDER, default='MALE')
-    photo = models.ImageField(upload_to='users/')
-
+   
     def __str__(self):
         return self.username
     

@@ -12,7 +12,7 @@ class RegisterView(generic.CreateView):
     form_class = forms.CustomRegisterForm
     success_url = '/login/'
     
-
+# 
 
 #Авторизация
 from django.contrib.auth.views import LoginView, LogoutView
